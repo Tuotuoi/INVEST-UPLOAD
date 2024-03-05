@@ -1,0 +1,1 @@
+downloads: https://stringdb-downloads.org/download/protein.links.v11.5/4577.protein.links.v11.5.txt.gz
