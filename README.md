@@ -19,4 +19,8 @@ INVEST training code
 - The required Python environment and Conda environment for this model have been placed in [**requirement.txt**] and [**environment.yml**]. TRY `conda env create -f environment.yml
 ` and `pip insatll -r requirement.txt`
 - Open INVEST.ipynb with Jupyter Notebook, and train in each cell in sequence from top to bottom.
-- 
+- Add expression dataset and pre-trained network dataset for fine-tuning in the data folder.
+- INVEST will automatically compute the number of genes in the expression dataset and the number of genes matching the pre-trained network. Based on these values, it will extract the TF-Target pairs from the pre-trained network.
+- The training of INVEST is divided into two steps.
+  - Firstly, train on the unlabeled expression data. After 200 iterations, the model will be automatically saved to the models folder (due to file size limitations, the author did not upload this model file).
+  -  Secondly, fine-tune the above model on the pre-trained network, and perform another 2000 iterations for classification. Output the corresponding AUROC and AUPRC results.
